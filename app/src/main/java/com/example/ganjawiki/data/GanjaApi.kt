@@ -7,7 +7,7 @@ import retrofit2.http.Query
 interface GanjaApi {
     @GET("v1/strains")
     fun getStrains(
-        @Query("?count=1000&sort=-createdAt") strain : String
-
+        @Query("count") count : Int,
+        @Query("sort")sort: String
     ) : Call<StrainResponse>
 }
