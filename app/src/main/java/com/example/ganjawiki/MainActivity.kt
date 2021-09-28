@@ -3,7 +3,7 @@ package com.example.ganjawiki
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.example.ganjawiki.databinding.ActivityMainBinding
+import ganjawiki.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -16,8 +16,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         listViewModel = ViewModelProvider(this)[ListViewMoldel::class.java]
 
+        // ação da api "mostrar as strains na recyclerview" //
+
         listViewModel.ganja.observe(this){
-            binding.listRecyclerView.adapter = ListAdapter(it.info,this)
+            binding.listRecyclerView.adapter = ListAdapter(it.data,this)
         }
 
 
