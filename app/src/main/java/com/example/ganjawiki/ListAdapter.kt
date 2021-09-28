@@ -5,15 +5,16 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Adapter
-import com.example.ganjawiki.databinding.ItemOnSelectedListBinding
+import com.example.ganjawiki.data.Data
+import ganjawiki.databinding.ItemOnSelectedListBinding
 
-class ListAdapter(private val items: List<ListItems>, private val context: Context) : Adapter<ListAdapter.ViewHolder>() {
+class ListAdapter(private val data: List<Data>, private val context: Context) : Adapter<ListAdapter.ViewHolder>() {
+
     class ViewHolder(val binding: ItemOnSelectedListBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(list: ListItems) {
-            binding.strainName.text = "Colombian Gold"
-            binding.budImage.
-            binding.description.text = "The most powerfull cannabis of the world"
-            binding.ganjaSource.text = "GOD"
+        fun bind(data: Data) {
+            binding.strainName.text = data.name
+            binding.description.text = data.genetics.names
+            binding.ganjaSource.text = data.
         }
     }
 
