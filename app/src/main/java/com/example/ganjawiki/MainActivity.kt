@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         listViewModel = ViewModelProvider(this)[ListViewMoldel::class.java]
+        listViewModel.getStrain()
 
         // ação da api "mostrar as strains na recyclerview" //
 
