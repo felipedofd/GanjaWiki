@@ -12,9 +12,9 @@ class ListViewMoldel : ViewModel() {
     val ganja = MutableLiveData<StrainResponse>()
     private val ganjaApi = RetrofitInitializer.ganjaApi()
 
-    fun setStrain(sort : String) {
+    fun getStrain() {
 
-        val result = ganjaApi.getStrains(count = 1000, sort).enqueue(object : Callback<StrainResponse>{
+        val result = ganjaApi.getStrains(count = 1000, "-createdAt").enqueue(object : Callback<StrainResponse>{
             override fun onResponse(call: Call<StrainResponse>, response: Response<StrainResponse>) {
                 ganja.postValue(response.body())
             }
