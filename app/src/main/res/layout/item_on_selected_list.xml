@@ -42,19 +42,11 @@
             android:scaleType="fitCenter"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/strainName" />
+            app:layout_constraintTop_toBottomOf="@+id/strainName"
+            app:layout_constraintBottom_toTopOf="@+id/description"
+            />
 
-        <TextView
-            android:id="@+id/ganjaSource"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            android:textColor="@color/white"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/budImage"
-            app:layout_constraintVertical_bias="0.487"
-            tools:ignore="MissingConstraints" />
+
 
         <TextView
             android:id="@+id/description"
@@ -62,10 +54,10 @@
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:textColor="@color/white"
+            android:layout_marginBottom="24dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="parent"
-            app:layout_constraintStart_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ganjaSource" />
+            app:layout_constraintStart_toEndOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
